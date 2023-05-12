@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\fast.png" />
+    <None Remove="Images\pause.png" />
+    <None Remove="Images\play.png" />
+    <None Remove="Images\slow.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CityBuilder\CityBuilder.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\fast.png" />
+    <Resource Include="Images\pause.png" />
+    <Resource Include="Images\play.png" />
+    <Resource Include="Images\slow.png" />
+  </ItemGroup>
+
+</Project>
