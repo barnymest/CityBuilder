@@ -120,7 +120,7 @@
                 </Button>
             </Grid>
         </Grid>
-        <!--Grid x:Name="TitleGrid" Visibility="Visible" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="{Binding ActualHeight, ElementName=GameWindow}" -->
+        <!--Grid x:Name="TitleGrid" Visibility="Visible" HELOGELOGrid.Row="0" HorizontalAlignment="Stretch" megint beleirtam hopsz VerticalAlignment="Stretch" Height="{Binding ActualHeight, ElementName=GameWindow}" -->
         <Grid x:Name="TitleGrid" Visibility="Visible" Grid.Row="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="{Binding ActualHeight, ElementName=Container}" >
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock Text="Welcome to City Builder!" FontSize="24" FontWeight="Bold" Margin="0,0,0,20"/>
