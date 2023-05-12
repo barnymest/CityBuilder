@@ -1,0 +1,29 @@
+name: Move Issues to Done
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  move-issues:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Move issues to Done
+        uses: actions/github-script@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          script: |
+            const github = context.github;
+            const issue = await github.issues.get(context.issue);
+            const columnId = '<COLUMN_ID>'; // Replace with the ID of your "Done" column
+            await github.projects.moveCard({
+              card_id: issue.data.number,
+              position: 'bottom',
+              column_id: columnId
+            });
